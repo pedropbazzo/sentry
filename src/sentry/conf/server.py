@@ -1419,6 +1419,9 @@ SENTRY_DEFAULT_INTEGRATIONS = (
 )
 
 
+SENTRY_INTERNAL_INTEGRATIONS = ["pagerduty"]
+
+
 def get_sentry_sdk_config():
     return {
         "release": sentry.__build__,
