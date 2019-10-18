@@ -32,7 +32,7 @@ describe('withUserTeams HoC', function() {
     ).not.toBeNull();
   });
 
-  it('fetches teams and works', async function() {
+  it('fetches teams and loads stores', async function() {
     const mockProjectA = TestStubs.Project({slug: 'a', id: '1'});
     const mockProjectB = TestStubs.Project({slug: 'b', id: '2'});
     const mockTeams = [
