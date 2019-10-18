@@ -10,6 +10,7 @@ const TeamStore = Reflux.createStore({
     this.listenTo(TeamActions.fetchDetailsSuccess, this.onUpdateSuccess);
     this.listenTo(TeamActions.removeTeamSuccess, this.onRemoveSuccess);
     this.listenTo(TeamActions.createTeamSuccess, this.onCreateSuccess);
+    this.listenTo(TeamActions.loadTeams, this.loadInitialData);
   },
 
   reset() {

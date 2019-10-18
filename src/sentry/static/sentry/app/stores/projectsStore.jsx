@@ -13,6 +13,7 @@ const ProjectsStore = Reflux.createStore({
     this.listenTo(ProjectActions.changeSlug, this.onChangeSlug);
     this.listenTo(ProjectActions.addTeamSuccess, this.onAddTeam);
     this.listenTo(ProjectActions.removeTeamSuccess, this.onRemoveTeam);
+    this.listenTo(ProjectActions.loadProjects, this.loadInitialData);
     this.listenTo(TeamActions.removeTeamSuccess, this.onDeleteTeam);
   },
 

@@ -16,6 +16,7 @@ const TeamActions = Reflux.createActions([
   'removeTeam',
   'removeTeamSuccess',
   'removeTeamError',
+  'loadTeams',
 ]);
 
 export default TeamActions;

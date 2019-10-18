@@ -20,4 +20,5 @@ export default Reflux.createActions([
   'removeTeam',
   'removeTeamSuccess',
   'removeTeamError',
+  'loadProjects',
 ]);
