@@ -77,8 +77,8 @@ describe('OrganizationStore', function() {
     // wait for action to get dispatched to store
     await tick();
 
-    const teamA = TestStubs.Team({slug: 'a_team'});
-    const teamB = TestStubs.Team({slug: 'b_team'});
+    const teamA = TestStubs.Team({slug: 'a'});
+    const teamB = TestStubs.Team({slug: 'b'});
     const teams = [teamB, teamA];
     TeamActions.loadTeams(teams);
     // wait for action to get dispatched to store
@@ -94,17 +94,14 @@ describe('OrganizationStore', function() {
     // wait for action to get dispatched to store
     await tick();
 
-    const mockProjectA = TestStubs.Project({slug: 'a'});
-    const mockProjectB = TestStubs.Project({slug: 'b'});
-    const projects = [mockProjectB, mockProjectA];
+    const projectA = TestStubs.Project({slug: 'a'});
+    const projectB = TestStubs.Project({slug: 'b'});
+    const projects = [projectB, projectA];
     ProjectActions.loadProjects(projects);
     // wait for action to get dispatched to store
     await tick();
 
     // verify existence and sorted order of loaded projects
-    expect(OrganizationStore.get().organization.projects).toEqual([
-      mockProjectA,
-      mockProjectB,
-    ]);
+    expect(OrganizationStore.get().organization.projects).toEqual([projectA, projectB]);
   });
 });
